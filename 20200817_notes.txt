@@ -1,0 +1,76 @@
+//Déploiement de Symfony
+https://docs.google.com/document/d/1VwmzbcE0jXbTzHwQN0eQ3Ny_7CtJ2TZQ7KGyJL37gpY/edit?usp=sharing
+
+https://www.scaleway.com/fr/
+https://aws.amazon.com/fr/
+
+https://aymdev.io/course/git// cours GIT de Aymeric Mayeux
+###########################################################################################################"
+
+
+https://flex.symfony.com/ 
+https://github.com/symfony/recipes
+https://github.com/symfony/recipes/tree/master/symfony/messenger
+
+
+https://www.npmjs.com/search?q=font%20awesome
+
+https://yarnpkg.com/
+https://bulma.io/ 				//son code source n'est en css;c'est écrit en SASS
+
+https://symfony.com/doc/current/frontend.html 			//documentation composant webPack Encore
+
+https://nodejs.org/en/download/
+
+https://aymdev.io/course/slide/webpack-encore
+
+https://bulma.io/documentation/
+
+https://bulma.io/documentation/
+
+#####################################################################################################################
+
+//code trouvé sur bulma pour faire fonctionner le menu mobile (hamburger)
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  // Get all "navbar-burger" elements
+  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+  // Check if there are any navbar burgers
+  if ($navbarBurgers.length > 0) {
+
+    // Add a click event on each of them
+    $navbarBurgers.forEach( el => {
+      el.addEventListener('click', () => {
+
+        // Get the target from the "data-target" attribute
+        const target = el.dataset.target;
+        const $target = document.getElementById(target);
+
+        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+        el.classList.toggle('is-active');
+        $target.classList.toggle('is-active');
+
+      });
+    });
+  }
+
+});
+
+################################################################################################
+
+https://aymdev.io/course/slide/partie-pratique // installe bulma
+
+------------------------------------héberger  ---------------------------
+
+https://www.scaleway.com/en/
+https://www.digitalocean.com/
+https://www.ikoula.com/fr
+https://www.heroku.com/
+https://www.fortrabbit.com/
+--------------offre pour étudiants Doranco -------------------------------------
+De Beldi Seifallah à tout le monde:  04:43 PM
+hébergeur de site web https://www.phpnet.org/pack-etudiant.php15€
+
+
