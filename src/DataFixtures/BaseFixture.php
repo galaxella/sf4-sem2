@@ -9,7 +9,7 @@ use Faker\Factory;
 use Faker\Generator;
 
 /**
- * Class "modèle" pour les fictures
+ * Class "modèle" pour les fixtures
  * On ne peut pas instancier un abstraction
  */
 abstract class BaseFixture extends Fixture

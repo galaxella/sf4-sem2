@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Artist;
+use App\Entity\Label;
 use App\Entity\Record;
 use App\Repository\ArtistRepository;
 use App\Repository\RecordRepository;
@@ -56,7 +57,17 @@ class RecordController extends AbstractController
 
        ]);
     }
+/**
+ * Page d'un label
+ * @Route ("/label/{id}", name="label_page")
+ */
+public function labelPage(Label $label)
+{
+    return $this->render('record/label_list.html.twig', [
+        'label'=> $label
 
+]);
+}
 
 
 
