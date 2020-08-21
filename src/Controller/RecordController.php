@@ -63,7 +63,7 @@ class RecordController extends AbstractController
  */
 public function labelPage(Label $label)
 {
-    return $this->render('record/label_list.html.twig', [
+    return $this->render('record/label_page.html.twig', [
         'label'=> $label
 
 ]);
