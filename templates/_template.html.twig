@@ -15,7 +15,8 @@
                 </p>
             </a>
 
-            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+               data-target="navbarBasicExample">
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
@@ -24,7 +25,7 @@
 
         <div id="navbarBasicExample" class="navbar-menu">
             <div class="navbar-start">
-                <a class="navbar-item" href="{{ path('artist_list')  }}">
+                <a class="navbar-item" href="{{ path('artist_list') }}">
                     Artistes
                 </a>
 
@@ -36,12 +37,28 @@
             <div class="navbar-end">
                 <div class="navbar-item">
                     <div class="buttons">
-                        <a class="button is-primary is-small" href="#">
-                            <strong>Inscription</strong>
+                        {% if app.user %}
+                            <a class="button is-primary is-small" href="#">
+                                <span class="icon"><i class="fas fa-user-circle"></i></span>
+                                <strong>{{ app.user.pseudo }}</strong>
+                            </a>
+                            <a class="button is-light is-small" href="{{ path('app_logout') }}">
+                                Déconnexion
+                            </a>
+
+                        {% else %}
+
+                            <a class="button is-light is-small" href="{{ path('app_login') }}">
+                                Connexion
+                            </a>
+                        {% endif %}
+
+
+                        {% if is_granted("ROLE_EDITOR") %}
+                        <a class="button is-primary is-small" href="{{ path('admin_dashboard') }}">
+                            <strong>Back-Office</strong>
                         </a>
-                        <a class="button is-light is-small" href="#">
-                            Connexion
-                        </a>
+                        {% endif %}
                     </div>
                 </div>
 
@@ -49,7 +66,8 @@
                     <form action="#">
                         <div class="field has-addons">
                             <div class="control is-expanded">
-                                <input name="query" type="text" class="input is-small" placeholder="Recherche ..." required>
+                                <input name="query" type="text" class="input is-small" placeholder="Recherche ..."
+                                       required>
                             </div>
                             <div class="control">
                                 <button type="submit" class="button is-primary is-small">
