@@ -1,0 +1,4 @@
+framework:
+    mailer:
+        envelope:
+            recipients: ['%env(DEFAULT_RECIPIENT)%']    # appelle la variable environnement definie dans.env et .env.local
