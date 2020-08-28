@@ -1,0 +1,22 @@
+{% extends '_template.html.twig' %}
+
+{% block title %}Modification{% endblock %}
+
+
+
+{% block content %}
+    <div class="section">
+        <h1 class="title">Modification</h1>
+
+
+        {{ form_start(registrationForm) }}
+
+        {{ form_row(registrationForm.email, {label: "Adresse email:"}) }}
+        {{ form_row(registrationForm.pseudo, {label: "Pseudo:"}) }}
+
+        <button type="submit" class="btn">
+            Modifier
+        </button>
+        {{ form_end(registrationForm) }}
+    </div>
+{% endblock %}

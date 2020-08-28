@@ -1,0 +1,26 @@
+{% extends '_template.html.twig' %}
+
+{% block title %} Mon profil {% endblock %}
+
+{% block content %}
+
+
+<section class="section">
+    <h1><b>Je te souhaite la bienvenue sur ton profil ! </b></h1><br>
+
+    <p> Adresse Email: {{ email }}</p>
+    <br>
+    <p> Pseudo: {{ pseudo }}</p><br>
+
+    <a class="button is-primary is-small" href="{{ path('profil_upDate') }}">
+        <strong>Modifier votre profil</strong>
+    </a>
+
+
+    <a class="button is-primary is-small" href="{{ path('password_upDate') }}">
+        <strong>Modifier la password</strong>
+    </a>
+
+
+</section>
+{% endblock %}
